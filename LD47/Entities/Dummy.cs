@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using LD47.Systems;
+using Microsoft.Xna.Framework;
 
 namespace LD47.Entities
 {
@@ -9,10 +10,10 @@ namespace LD47.Entities
 			public Vector2 Position;
 		}
 
-		public static Sprite ToSprite(Dummy.Data) =>
+		public static Sprite ToSprite(Data d) =>
 			new Sprite(
 				GameContent.Texture2Ds.dummy,
-				entity.Position,
+				d.Position,
 				Color.White
 			);
 	}
